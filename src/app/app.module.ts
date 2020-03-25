@@ -1,18 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+@Component({
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
-export class AppModule { }
+export class HomeComponent implements OnInit {
+
+    constructor(private router: Router) {}
+
+    ngOnInit() {
+    }
+
+    btnClick(){
+        this.router.navigate(['/employees']);
+    }
+}

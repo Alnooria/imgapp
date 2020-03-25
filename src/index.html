@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Picapp</title>
+ 
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -11,13 +12,36 @@
   <app-root></app-root>
   <center>
   <img src="C:\Users\User\pic\picapp\src\assets\pic.png.jpeg" 
-  height="500"
-  width="500">
+  height="200"
+  width="250">
+
+  <img src="C:\Users\User\pic\picapp\src\assets\pic2.png"
+  height="200"
+  width="250">
+
+
+  <picture>
+    <source
+        media="(orientation: landscape)">
+        <img src="C:\Users\User\pic\picapp\src\assets\pic1.jpg"
+         srcset="image-hidpi.png 2x, image-higherdpi.png 4x"
+         alt="Image description">
+   </picture>
+
+<form>
+  <div class="input">
+  <label>Username</label>
+  <input type="text" name="username" [(ngModel)]="username">
+  </div>
+
+  <div class="input">
+  <label>Password</label>
+  <input type="password" name="password" [(ngModel)]="password">
+  </div>
+  <div class ="input">
+      <input type="Submit" value="Login" (click)="LoginUser()">
+  </div>
+</form>  
 </center>
-  <div>
-    <center>
-    <button md-raised-button color="primary 
-    (click)="openDialog()">Click Me!</button>
-  </center>
   </body>
 </html>
